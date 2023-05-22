@@ -1,0 +1,19 @@
+[
+    {
+        "name" : "Gale Reef",
+        "image" : "reef1.jpg",
+        "description" : "<p>GALE REEF IS THE BEST!!! </p> <p> COME TO GALE REEF </p>"
+    },
+    {
+        "name" : "Dawson's Reef",
+        "image" : "reef2.jpg",
+        "description" : "<p>NO DAWSON REEF IS THE BEST </p> <p> WE'RE THE WINNER </p>"
+    },
+    {
+        "name" : "Claire's Reef",
+        "image" : "reef3.jpg",
+        "description" : "<p>CLAIRE'S FOR SURE, HANDS DOWN!!!</p> <p> C'MOOOOON </p>"
+
+    }
+
+]

@@ -1,0 +1,21 @@
+[
+    {
+        "name" : "First Class, aka the baller suite",
+        "image" : "first-class.jpg",
+        "description" : "<p> First class first class first class</p>",
+        "rate" : "Rate: 220 / Day"
+    },
+    {
+        "name" : "Deluxe For Fewer Bucks",
+        "image" : "deluxe.jpg",
+        "description" : "<p> Deluxe Deluxe </p>",
+        "rate" : "Rate: 150 / Day"
+    },
+    {
+        "name" : "Suite for my sweet",
+        "image" : "suite.jpg",
+        "description" : "<p> The sweatness </p>",
+        "rate" : "Rate: 180 / Day"
+    }
+
+]
