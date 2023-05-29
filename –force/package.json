@@ -1,5 +1,5 @@
 {
-  "name": "travlr",
+  "name": "force",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -11,8 +11,6 @@
     "express": "~4.16.1",
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
-    "mongoose": "^5.11.18",
-    "morgan": "~1.9.1",
-    "seedgoose": "^2.0.2"
+    "morgan": "~1.9.1"
   }
 }
