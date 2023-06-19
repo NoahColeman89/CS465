@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const Trip = mongoose.model('trips');
 const User = mongoose.model('users');
 
+mongoose.set('useFindAndModify', false);
+
 // GET: /trips - list all the trips
 const tripsList = async (req, res) => {
     Trip
@@ -115,6 +117,40 @@ const tripsUpdateTrip = async (req, res) => {
     )
 }
 
+const tripsDeleteTrip = async (req, res) => {
+    console.log(req.body);
+    
+    getUser(req,res,
+        (req, res) => {
+        Trip.findOneAndDelete({'code': req.params.tripCode})
+    
+        .then(trip => {
+            if (!trip) {
+                return res
+                    .status(404)
+                    .send({
+                        message: "Trip not found with code " + req.params.tripCode
+                    });
+    
+            }
+            return res
+                
+        }).catch(err => {
+            if (err.kind === 'ObjectId') {
+                return res
+                    .status(404)
+                    .send({
+                        message: "Trip not found with code " + req.params.tripCode
+                    });
+            }
+            return res
+                .status(500) // server error
+                .json(err);
+        })
+
+    });
+}
+
 const getUser = (req, res, callback) => {
         if(req.payload && req.payload.email) {
             User
@@ -143,5 +179,6 @@ module.exports = {
     tripsList,
     tripsFindCode,
     tripsAddTrip,
-    tripsUpdateTrip
+    tripsUpdateTrip,
+    tripsDeleteTrip
 };
